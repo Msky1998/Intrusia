@@ -1,0 +1,11 @@
+vous devez installer
+
+pip install
+
+customtkinter
+Pillow
+scapy
+joblib
+scikit-learn
+matplotlib
+pyinstaller
