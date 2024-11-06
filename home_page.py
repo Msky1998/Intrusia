@@ -1,12 +1,12 @@
 import customtkinter as ctk
 from PIL import Image
-
+import os
 class HomePage(ctk.CTkFrame):
     def __init__(self, master):
         super().__init__(master)
         self.master = master
-
-        image_light = Image.open("images/cadenas.png")
+        image_path = os.path.join(os.path.dirname(__file__), 'images', 'cadenas.png')
+        image_light = Image.open(image_path)
         my_image = ctk.CTkImage(light_image=image_light,size=(450,256))
 
 

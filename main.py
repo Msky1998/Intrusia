@@ -3,13 +3,15 @@ from sidebar import Sidebar
 from home_page import HomePage
 from real_time_analysis import RealTimeAnalysis
 from simulation import Simulation
+import os
 
 class App(ctk.CTk):
     def __init__(self):
         super().__init__()
         self.title("Intrusia App")
         self.geometry("800x600")
-        self.iconbitmap('images/cadenas.ico')  # Choix de thème de couleur
+        image_path = os.path.join(os.path.dirname(__file__), 'images', 'cadenas.ico')
+        self.iconbitmap(image_path)  # Choix de thème de couleur
 
 
         self.sidebar = Sidebar(self, self.show_page,self.toggle_theme)
